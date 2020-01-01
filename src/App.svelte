@@ -1,30 +1,34 @@
 <script>
-	export let name;
+  import MenuList from './components/MenuList.svelte'
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<div class="app">
+  <MenuList />
+</div>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  :root {
+    --padding: 16px 32px;
+    --transition-duration: 0.3s;
+    --products-width: 490px;
+    --products-height: 280px;
+    --developers-width: 390px;
+    --developers-height: 266px;
+    --company-width: 260px;
+    --company-height: 296px;
+  }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  :global(*) {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  :global(body) {
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(-45deg, #19C5FE, #4553FF);
+    padding: 20px;
+  }
 </style>
