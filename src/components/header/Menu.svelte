@@ -1,9 +1,16 @@
-<svelte:options immutable/>
+<svelte:options immutable />
 
 <script>
-	export let index
 	export let menu
 </script>
+
+<button
+  class="menu"
+  on:mouseenter
+  on:mouseleave
+>
+  {menu}
+</button>
 
 <style>
 	.menu {
@@ -24,10 +31,3 @@
   }
 </style>
 
-<button
-  class="menu"
-  on:mouseenter
-  on:mouseleave
->
-  {menu}
-</button>

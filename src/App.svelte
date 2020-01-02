@@ -1,10 +1,10 @@
-<script>
-  import MenuList from './components/MenuList.svelte'
-</script>
-
 <div class="app">
-  <MenuList />
+  <Header />
 </div>
+
+<script>
+  import Header from './components/header/Header.svelte'
+</script>
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');

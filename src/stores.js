@@ -1,9 +1,9 @@
 import { writable, readable} from 'svelte/store'
 
 export const menuList = readable([
-  'Products',
-  'Developers',
-  'Company'
+  'products',
+  'developers',
+  'company'
 ])
 
 export const activeMenu = writable(null)
