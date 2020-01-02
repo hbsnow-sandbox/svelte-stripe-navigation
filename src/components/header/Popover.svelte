@@ -20,6 +20,14 @@
   $: if ($activeMenu !== null) {
     lastActiveMenu = $activeMenu
   }
+
+  const calcBackgroundScale = () => {
+    if (lastActiveMenu === null) return ''
+    return `
+      scaleX(${dimensions[$menuList[lastActiveMenu]].width / dimensions.products.width})
+      scaleY(${dimensions[$menuList[lastActiveMenu]].height / dimensions.products.height})
+    `
+  }
 </script>
 
 <div
@@ -81,11 +89,7 @@
         height: {parseInt(dimensions.products.height)}px;
         transform:
           translateX({lastActiveMenu * 120}px)
-          {lastActiveMenu !== null ? `
-            scaleX(${dimensions[$menuList[lastActiveMenu]].width / dimensions.products.width})
-            scaleY(${dimensions[$menuList[lastActiveMenu]].height / dimensions.products.height})
-          ` : ''
-          }
+          {calcBackgroundScale()}
         ;
       "
     ></div>  
