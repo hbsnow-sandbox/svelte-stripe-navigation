@@ -12,12 +12,6 @@
   :root {
     --padding: 16px 32px;
     --transition-duration: 0.3s;
-    --products-width: 490px;
-    --products-height: 280px;
-    --developers-width: 390px;
-    --developers-height: 266px;
-    --company-width: 260px;
-    --company-height: 296px;
   }
 
   :global(*) {
